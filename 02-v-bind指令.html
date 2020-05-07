@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        1. 引入 需要的依赖库
+    -->
+    <script src="https://cn.vuejs.org/js/vue.js"></script> 
+</head>
+<body>
+    <div id="app">
+        <span title="你好">hello</span>
+        <br />
+        <br />
+        <span v-bind:title="title">今天星期几</span>
+    </div>
+</body>
+<script>
+    let vm=new Vue({
+        el:"#app",
+        data:{
+            title:"今天是星期四",
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        1. 引入 需要的依赖库
+    -->
+    <script src="https://cn.vuejs.org/js/vue.js"></script> 
+</head>
+<body>
+    <div id="app">
+        <ol>
+            <li v-for="item,index in words" v-bind:key="index">
+                {{index}}:{{item.text}}
+            </li>
+        </ol>
+    </div>
+</body>
+<script>
+    let vm = new Vue({
+        el:"#app",
+        data:{
+            words:[
+                {text:"梦不会逃走，逃走的一直都是自己。"},
+                {text:"忍得一时之气，免得百日之忧。"},
+                {text:"人不劝不善，钟不打不鸣。"},
+            ]
+        }
+    })
+</script>
+</html>

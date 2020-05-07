@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        1. 引入 需要的依赖库
+    -->
+    <script src="https://cn.vuejs.org/js/vue.js"></script> 
+</head>
+<body>
+    <div class="app">
+        <P v-if="content">{{message}}</P>
+        <p v-show="content2">{{message2}}</p>
+    </div>
+</body>
+<script>
+    let vm=new Vue({
+        el:".app",
+        data:{
+            content:true,
+            message:"人生而自由，却无往不在枷锁中",
+            content2:true,
+            message2:"人们赞美流星，是因为它燃烧着走完自己的全部路程"
+        }
+    })
+</script>
+</html>

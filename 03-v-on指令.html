@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        1. 引入 需要的依赖库
+    -->
+    <script src="https://cn.vuejs.org/js/vue.js"></script> 
+</head>
+<body>
+    <div id="app">
+        <img v-bind:src="src" alt="">
+        <br />
+        <button v-on:click="pitc">按钮</button>  
+    </div>
+</body>
+<script>
+    let vm=new Vue({
+        el:"#app",
+        data:{
+            src:""
+        },
+        methods:{
+            pitc:function(){
+                this.src="http://img0.imgtn.bdimg.com/it/u=3434349496,2420016048&fm=26&gp=0.jpg"
+            }
+        }
+        
+    })
+</script>
+</html>

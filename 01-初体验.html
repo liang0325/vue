@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        1. 引入 需要的依赖库
+    -->
+    <script src="https://cn.vuejs.org/js/vue.js"></script> 
+</head>
+<body>
+    <div id="app">
+        <p>{{mesg}}</p>
+        <img v-bind:src="pitc" >
+    </div>
+</body>
+<script>
+    let vm =new Vue({
+        el:"#app",
+        data:{
+            mesg:"今天是天晴",
+            pitc:"http://img2.imgtn.bdimg.com/it/u=3313838802,2768404782&fm=26&gp=0.jpg"
+        }
+    })
+</script>
+</html>
