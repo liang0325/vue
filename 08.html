@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        1. 引入 需要的依赖库
+    -->
+    <script src="https://cn.vuejs.org/js/vue.js"></script>
+    <style>
+        img{
+            width: 250px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <img :src="imgurl[index]" alt="" class="bg">
+        <span>
+          <a href="#" class="left" @click="prev" v-show="index!=0">
+            <button> &lt </button>
+          </a>
+        </span>
+        <a href="# " class="right " @click="next " v-show="index<imgurl.length-1">
+          <button> &gt </button>
+        </a>
+      </div>
+</body>
+<script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        imgurl: ["https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1713396441,1487163637&fm=26&gp=0.jpg ", "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588850849433&di=48e7fafbe260c31e306f0b5c6c6acd01&imgtype=0&src=http%3A%2F%2Fp2.so.qhimgs1.com%2Ft01dfcbc38578dac4c2.jpg",
+          "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588850849431&di=7d07a9d47b0248697bce419ddae37c5f&imgtype=0&src=http%3A%2F%2Fi1.sinaimg.cn%2FIT%2F2010%2F0419%2F201041993511.jpg",
+          "http://img0.imgtn.bdimg.com/it/u=3316779385,1881416505&fm=26&gp=0.jpg"
+        ],
+        index: 0,
+      },
+      methods: {
+        prev: function () {
+            this.index -= 1;
+        },
+        next: function () {
+            this.index += 1;
+        },
+      },
+    })
+  </script>
+</html>

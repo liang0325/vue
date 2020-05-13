@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        1. 引入 需要的依赖库
+    -->
+    <script src="https://cn.vuejs.org/js/vue.js"></script> 
+    <style>
+        img{
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <img v-bind:src="pit" alt="">
+        <button v-on:click="click"> &lt </button>
+        <button v-on:click="btn"> &gt </button>
+    </div>
+</body>
+<script>
+    let vm = new Vue({
+        el:"#app",
+        data:{
+            pit:"",
+        },
+        methods:{
+            click:function(){
+                this.pit="https://www.splitshire.com/wp-content/uploads/2016/02/SplitShire-2851.jpg"
+            },
+            btn:function(){
+                this.pit="http://img.mp.itc.cn/upload/20160819/a2269841d9fa45a380615493b5f6c6ac_th.jpg"
+            }
+        }
+    })
+</script>
+</html>
